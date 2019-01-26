@@ -1,0 +1,77 @@
+$gray:#333;
+$white:#fff;
+$yellow:#ffa600;
+$blue:#07f;
+
+
+
+.calculator{
+    width: 400px;
+    height: 700px;
+    margin-top:50px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 12px 12px 40px 5px rgba(0,0,0,0.4);
+    border-radius: 20px;
+    display: none;
+    .myDisplay{
+        background-color:darken( $gray,20%);
+        height: 200px;
+        color: $white;
+        padding-top: 15px;
+        text-align: right;
+        padding-left: 40px;
+        padding-right: 40px;
+        font-size: 3em;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    .myButton{
+        height: 100px;
+        width: 100px;
+        text-align: center;
+        color: $white;
+        padding-top: 25px;
+        font-size: 2em;
+        background-color: $gray;
+        cursor: pointer;
+        &:hover{
+            transition: 0.3s;
+            background-color:darken( $gray,5%);
+        }
+        &:active{
+            transition: none;
+            background-color:darken( $gray,10%);
+        }
+    }
+    .operatorButton{
+        background-color: $yellow;
+        &:hover{
+            background-color:adjust-hue($yellow, $degrees: -4%)
+        }
+        &:active{
+            background-color:adjust-hue($yellow, $degrees: -8%)
+        }
+    }
+    .clearButton{
+        color: darken( $white,50%);
+    }
+    .bigButton{
+        text-align: center;
+        background-color: $blue;
+        height: 100px;
+        padding-top: 15px;
+        color: $white;
+        font-size: 3em;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        cursor: pointer;
+        &:hover{
+            transition: 0.3s;
+            background-color:adjust-hue($blue, $degrees: 4%)
+        }
+        &:active{
+            transition:none;
+            background-color:adjust-hue($blue, $degrees: 8%)
+        }
+    }
+}
